@@ -5,16 +5,57 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
-      child: Center(
-          child: Text(
-        "login page hai yeh",
-        style: TextStyle(
-          color: Colors.blue,
-          fontWeight: FontWeight.w500,
-          fontStyle: FontStyle.italic,
-        ),
-      )),
-    );
+    return Material(
+        color: Colors.white,
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/login_image.png",
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const Text(
+              "Welcome",
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: "Input Username",
+                      labelText: "Username",
+                    ),
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                        hintText: "Input Password", labelText: "Password"),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      print("gm gm gm");
+                    },
+                    child: const Text("Login"),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 58, 21, 227)),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }

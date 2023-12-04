@@ -48,9 +48,9 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       print("gm gm gm");
                     },
-                    child: const Text("Login"),
                     style: TextButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 58, 21, 227)),
+                        backgroundColor: const Color.fromARGB(255, 58, 21, 227)),
+                    child: const Text("Login"),
                   ),
                 ],
               ),

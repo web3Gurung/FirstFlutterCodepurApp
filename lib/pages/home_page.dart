@@ -8,18 +8,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            "Android Phone",
-          ),
+        title: const Text(
+          "Android Phone",
         ),
       ),
-      body: Center(
-        child: Container(
-          child: const Text("my age is not"),
-        ),
+      body: const Center(
+        child: Text("my age is not"),
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }

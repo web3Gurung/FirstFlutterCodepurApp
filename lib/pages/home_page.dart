@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Android Phone",
+          "Catalog App",
         ),
       ),
       body: const Center(

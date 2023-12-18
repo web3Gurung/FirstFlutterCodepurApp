@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:open_app/models/catalog.dart';
@@ -20,9 +21,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
-    var decodeData = jsonDecode(catalogJson);
-    print(decodeData);
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    final decodeData = jsonDecode(catalogJson);
+    final productsData = decodeData["products"];
+    if (kDebugMode) {
+      print(productsData);
+    }
   }
 
   @override

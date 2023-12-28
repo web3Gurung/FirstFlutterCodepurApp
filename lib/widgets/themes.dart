@@ -20,6 +20,6 @@ class MyTheme {
         brightness: Brightness.dark,
       );
 
-  static Color creamColor = const Color(0xFFFFFDD0);
+  static Color creamColor = const Color.fromARGB(255, 236, 236, 236);
   static Color darkBluishColor = const Color(0xFF00008B);
 }
